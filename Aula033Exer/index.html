@@ -7,6 +7,22 @@
     <title>CEP</title>
 </head>
 <body>
-    
+    <form data-js="form-cep">
+        <input type="text" data-js="input-cep">
+        <button type="submit">Consultar CEP</button>
+    </form>
+
+    <div data-js="status-cep"></div>
+
+    <div data-js="cep-info">
+        <p><strong>Logradouro:</strong> <span data-js="logradouro"></span></p>
+        <p><strong>Bairro:</strong> <span data-js="bairro"></span></p>
+        <p><strong>Estado:</strong> <span data-js="estado"></span></p>
+        <p><strong>Cidade:</strong> <span data-js="cidade"></span></p>
+        <p><strong>CEP:</strong> <span data-js="cep"></span></p>
+    </div>
+
+    <script src="dom.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
