@@ -11,7 +11,7 @@ onmouseout -> Disparado quando o mouse é movido para fora do elemento.
 onmousemove -> Disparado quando o mouse é movido no elemento.
 onmousedown -> Disparado quando o clique do botão foi pressionado.
 onmouseup -> Disparado quando o clique do botão é liberado.
-onfocus -> Disparado quando o elemento recebe o foco. Válido oara input
+onfocus -> Disparado quando o elemento recebe o foco. Válido para input
 onchange -> Disparado quando existe uma mudança no conteudo. "Ao mudar".
 onblur -> Disparado quando o elemento perde o foco.
 onkeydown -> Disparado quando uma tecla é pressionada.
