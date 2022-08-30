@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enventos de Tempo</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            width: 200px;
+            height: 70px;
+        }
+
+        .start {
+            background-color: darkgreen;
+        }
+
+        .stop {
+            background-color: indianred;
+        }
+    </style>
 </head>
 <body>
+    <h1>Controle de Tempo</h1>
+    <h2 id="tempo">10</h2>
+    <button onclick="ativarContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Parar Contagem</button>
+
     <script src="main.js"></script>
 </body>
 </html>
