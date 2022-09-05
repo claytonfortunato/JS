@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
@@ -14,6 +15,31 @@
         <input id="inputTarefa" type="text" placeholder="Digite sua Tarefa">
         <button class="add">Adicionar</button>
     </header>
+
+    <main id="areaLista">
+        <div class="item">
+            <div class="item-icone">
+                <i class="mdi mdi-circle-outline"></i>
+            </div>
+            <div class="item-nome">
+                Teste de tarefa
+            </div>
+            <div class="item-botao">
+                <button class="delete"><i class="mdi mdi-delete">Deletar</i></button>
+            </div>
+        </div>
+        <div class="item clicado">
+            <div class="item-icone">
+                <i class="mdi mdi-check-circle"></i>
+            </div>
+            <div class="item-nome">
+                Teste de tarefa
+            </div>
+            <div class="item-botao">
+                <button class="delete"><i class="mdi mdi-delete">Deletar</i></button>
+            </div>
+        </div>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
