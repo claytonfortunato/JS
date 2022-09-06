@@ -10,6 +10,7 @@
 h1 {
     text-align: center;
     font-size: 3rem;
+    margin-top: 20px;
 }
 
 header {
@@ -44,7 +45,7 @@ main {
     flex-flow: row wrap;
     width: 90%;
     margin: auto auto;
-    border: 1px solid blue;
+    border: 1px solid rgba(242, 242, 245, 0.342);
     padding-top: 40px;
 }
 
@@ -58,6 +59,7 @@ main {
     width: 100%;
     box-shadow: 0 0 20px #ccc;
     margin-bottom: 2%;
+    cursor: pointer;
 }
 
 .item.clicado {
