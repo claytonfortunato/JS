@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+h1, h2 {
+    padding: 10px;
+}
+
+button {
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-ini {
+    background-color: rgb(46, 128, 46);
+}
+
+.btn-pause {
+    background-color: red;
+}
+
+.btn-reset {
+    background-color: darkgray;
+}
+
