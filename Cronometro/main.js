@@ -11,7 +11,7 @@ function twoDigits(digits) {
 }
 
 function Iniciar() {
-    interval = setInterval(tempo,10);
+    interval = setInterval(tempo,100);
 }
 
 function Pause() {
