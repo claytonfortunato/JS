@@ -10,36 +10,36 @@
 <body>
     <div class="calc">
         <h1 class="titulo-calc">Calculadora</h1>
-        <p id="resultado">Res</p>
+        <p id="resultado"></p>
         <table class="teclado-cal">
             <tr>
-                <td><button class="btn-laranja">AC</button></td>
-                <td><button class="btn-laranja">C</button></td>
-                <td><button class="btn-laranja">%</button></td>
-                <td><button class="btn-laranja">/</button></td>
+                <td><button class="btn-laranja" onclick="Limpar()">AC</button></td>
+                <td><button class="btn-laranja" onclick="voltar()">C</button></td>
+                <td><button class="btn-laranja" onclick="Inserir('%')">%</button></td>
+                <td><button class="btn-laranja" onclick="Inserir('/')">/</button></td>
             </tr>
             <tr>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button class="btn-laranja">X</button></td>
+                <td><button onclick="Inserir(7)">7</button></td>
+                <td><button onclick="Inserir(8)">8</button></td>
+                <td><button onclick="Inserir(9)">9</button></td>
+                <td><button class="btn-laranja" onclick="Inserir('*')">X</button></td>
             </tr>
             <tr>
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-                <td><button>6</button></td>
-                <td><button class="btn-laranja">-</button></td>
+                <td><button onclick="Inserir(4)">4</button></td>
+                <td><button onclick="Inserir(5)">5</button></td>
+                <td><button onclick="Inserir(6)">6</button></td>
+                <td><button class="btn-laranja" onclick="Inserir('-')">-</button></td>
             </tr>
             <tr>
-                <td><button>1</button></td>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
-                <td><button class="btn-laranja">+</button></td>
+                <td><button onclick="Inserir(1)">1</button></td>
+                <td><button onclick="Inserir(2)">2</button></td>
+                <td><button onclick="Inserir(3)">3</button></td>
+                <td><button class="btn-laranja" onclick="Inserir('+')">+</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="zero">0</button></td>
-                <td><button>,</button></td>
-                <td><button class="btn-laranja-red">=</button></td>
+                <td colspan="2"><button onclick="Inserir(0)" class="zero">0</button></td>
+                <td><button onclick="Inserir('.')">,</button></td>
+                <td><button class="btn-laranja-red" onclick="calcular()">=</button></td>
             </tr>
         </table>
         
