@@ -6,5 +6,15 @@
 // condition ? value1 : value2
 
 // Exemplos
-
 // Café da manhã top
+let pao = true
+let queijo = false
+
+const niceBreakfast = pao || queijo ? 'Cafe top' : 'Café ruim'
+
+console.log(niceBreakfast)
+
+//Maior de 18
+let age = 16
+const canDrive = age >= 18 ? 'can drive' : "can't ddrive"
+console.log(canDrive)
