@@ -1,0 +1,22 @@
+{
+    "nome":"Jakeliny Gracielly",
+    "cidade":"São Paulo",
+    "telefone": 049820932483,
+    "livros_favoritos": [
+        "neuromancer",
+        "codigo limpo",
+        "essencialismo"
+    ],
+    "hobbis": {
+        "semana":"patinação",
+        "fim_de_semana": {
+            "sabado":"cinema",
+            "domingo":"parque",
+            "outros": [
+                "caminhada",
+                "volei",
+                "netflix"
+            ]
+        }
+    }
+}
