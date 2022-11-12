@@ -8,7 +8,7 @@ function getUsers() {
 }
 
 function getUser() {
-    fetch(`${url}/18`)
+    fetch(`${url}/${id}`)
       .then(response => response.json())
       .then(data => {
         userName.textContent = data.name
@@ -23,13 +23,37 @@ function addUser(newUser) {
     method: "POST",
     body: JSON.stringify(newUser),
     headers: {
-      "Content-type": "application/json;
-      charset=UFT-8"
+      "Content-type": "application/json;charset=UFT-8"
     }
   })
   .then(response => response.json())
   .then(data => alertApi.textContent = data)
   .catch(error => console.error(error))
+}
+
+function updateUser() {
+  fetch(`${url}/1`, {
+    method: "PUT",
+    body: JSON.stringify(updateUser),
+    headers: {
+      "Content-type": "application/json;charset=UTF-8"
+    }
+  })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
+}
+
+function deleteUser(id) {
+  fetch(`${url}/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json;charset=UTF-8"
+    }
+  })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
 }
 
 const newUser = {
@@ -38,6 +62,14 @@ const newUser = {
   city: "Rio do sul"
 }
 
+const updatedUser = {
+  name: "Marcelo Clovis",
+  avatar: "https://picsum.photos/200/300",
+  city: "Recife"
+}
+
 addUser(newUser)
+deleteUser(5)
+updateUser(updateUser, 1)
 getUsers()
 getUser()
