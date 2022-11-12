@@ -8,4 +8,22 @@ function getUsers() {
     .catch(error => console.error(error))
 }
 
+function addNewUser() {
+    axios.post(url)
+        name: "Olivia Zars",
+        avatar: "https://picsum.photos/200/300"
+        city: "Rio de Janeiro"
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => console.error(error))
+}
+
+const newUser = {
+    name: "Olivia Zars",
+    avatar: "https://picsum.photos/200/300",
+    city: "Rio de Janeiro"
+}
+
+addNewUser(newUser)
 // getUsers()
