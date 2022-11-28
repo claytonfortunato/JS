@@ -1,10 +1,10 @@
 const cellElements = document.querySelectorAll("[data-cell]");
 const board = document.querySelector("[data-board]");
-const winningMessageTextElement = document.querySelector("[data-winning-message]");
+const winningMessageTextElement = document.querySelector("[data-winning-message-text]");
 const winningMessage = document.querySelector("[data-winning-message]");
 const RestartButton = document.querySelector("[data-restart-button]")
 
-let isCircleTurn;
+let isCircleTurn; 
 
 const winningCombinations = [
     [0, 1, 2],
@@ -31,7 +31,7 @@ const startGame = () => {
     winningMessage.classList.remove("show-winning-message");
 };
 
-const endGame = (draw) => {
+const endGame = (isDraw) => {
     if (isDraw) {
         winningMessageTextElement.innerText = 'Empate!'
     } else {
@@ -50,8 +50,8 @@ const checkForWin = (currentPlayer) => {
 };
 
 const checkForDraw = () => {
-    return [...cellElements].every(cell => {
-        cell.classList.contains('x') || cell.classList.contains('circle');
+    return [...cellElements].every((cell) => {
+        return cell.classList.contains('x') || cell.classList.contains('circle');
     });
 };
 
@@ -68,7 +68,7 @@ const setBoardHoverClass = () => {
     } else {
         board.classList.add("x");
     }
-}
+};
 
 const swapTurns = () => {
     isCircleTurn = !isCircleTurn;
@@ -90,14 +90,21 @@ const handleClick = (e) => {
         endGame(false);
     }
     // Verificar por empate
-    // Mudar símbolo
-    swapTurns();
-};
+    const isDraw = checkForWin(classToAdd);
 
-for (const cell of cellElements) {
-    cell.addEventListener("click", handleClick, { once: true });
-}
+    if (isWin) {
+        endGame(false);
+    } else if (isDraw) {
+        endGame(true);
+    } else {
+        // Mudar símbolo
+    swapTurns();
+    }
+    
+};
 
 startGame();
 
 RestartButton.addEventListener("click", startGame);
+
+
