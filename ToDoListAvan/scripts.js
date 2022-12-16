@@ -5,6 +5,8 @@ const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
+const searchInput = document.querySelector("#search-input");
+const eraseBtn = document.querySelector("#erase-button");
 
 let oldInputValue;
 
@@ -49,6 +51,22 @@ const updateTodo = (text) => {
         }
     })
 }
+
+const getSearchedTodos = (search) => {
+    const todos = document.querySelectorAll(".todo");
+  
+    todos.forEach((todo) => {
+      const todoTitle = todo.querySelector("h3").innerText.toLowerCase();
+  
+      todo.style.display = "flex";
+  
+      console.log(todoTitle);
+  
+      if (!todoTitle.includes(search)) {
+        todo.style.display = "none";
+      }
+    });
+};
 
 const toggleForms = () => {
     editForm.classList.toggle("hide");
@@ -108,4 +126,18 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms();
-})
+});
+
+searchInput.addEventListener("keyup", (e) => {
+    const search = e.target.value;
+  
+    getSearchedTodos(search);
+});
+
+eraseBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    searchInput.value = "";
+  
+    searchInput.dispatchEvent(new Event("keyup"));
+});
