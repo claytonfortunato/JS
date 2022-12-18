@@ -1,8 +1,8 @@
-function sum(a, b = 10) {
+function sum(a, b = 10) {  // Function
     return a + b;
 }
 
-const sumArrow = (a, b = 10) => {
+const sumArrow = (a, b = 10) => { // Arrow function
     return a + b;
 };
 
