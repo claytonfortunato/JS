@@ -52,3 +52,28 @@ btnGenerate.addEventListener("click", () => {
         length
     );
 });
+
+const generatePassword = (lower, upper, number, symbol, length) => {
+    let gPassword = "";
+
+    const typesArr = [{ lower }, { upper }, { number }, { symbol }]
+    .filter (
+        (item) => {
+            return Object.values(item)[0];
+        }
+    );
+
+    for (let i = 0; i < length; i++) {
+        typesArr.forEach((type) => {
+            const funcName = Object.keys(type)[0];
+            gPassword += randomChar[funcName] ();
+        });
+    }
+
+    const finallyPassword = gPassword.slice(0, length);
+    return finallyPassword;
+}
+
+btnCopy.addEventListener("click", () => {
+    navigator.clipboard.writeText(result.value);
+});
